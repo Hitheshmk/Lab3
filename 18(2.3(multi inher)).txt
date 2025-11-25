@@ -1,0 +1,77 @@
+using System;
+
+class Person
+{
+    public string name;
+    public int age;
+
+    public void GetPersonDetails()
+    {
+        Console.Write("Enter name: ");
+        name = Console.ReadLine();
+
+        Console.Write("Enter age: ");
+        age = int.Parse(Console.ReadLine());
+    }
+
+    public void ShowPersonDetails()
+    {
+        Console.WriteLine("Name: " + name);
+        Console.WriteLine("Age: " + age);
+    }
+}
+
+class Employee : Person
+{
+    public int empId;
+    public string department;
+
+    public void GetEmployeeDetails()
+    {
+        Console.Write("Enter employee ID: ");
+        empId = int.Parse(Console.ReadLine());
+
+        Console.Write("Enter department: ");
+        department = Console.ReadLine();
+    }
+
+    public void ShowEmployeeDetails()
+    {
+        Console.WriteLine("Employee ID: " + empId);
+        Console.WriteLine("Department : " + department);
+    }
+}
+
+class Manager : Employee
+{
+    public string project;
+
+    public void GetManagerDetails()
+    {
+        Console.Write("Enter project name: ");
+        project = Console.ReadLine();
+    }
+
+    public void ShowManagerDetails()
+    {
+        Console.WriteLine("Project     : " + project);
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        Manager mgr = new Manager();
+
+        Console.WriteLine("--- Enter Manager Details ---");
+        mgr.GetPersonDetails();
+        mgr.GetEmployeeDetails();
+        mgr.GetManagerDetails();
+
+        Console.WriteLine("\n--- Manager Information ---");
+        mgr.ShowPersonDetails();
+        mgr.ShowEmployeeDetails();
+        mgr.ShowManagerDetails();
+    }
+}

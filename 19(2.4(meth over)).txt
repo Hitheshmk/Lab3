@@ -1,0 +1,36 @@
+using System;
+class AreaCalculator
+{
+    public double Area(double radius)
+    {
+        return Math.PI * radius * radius;
+    }
+
+    public double Area(double b, double h)
+    {
+        return 0.5 * b * h;
+    }
+
+    public int Area(int side)
+    {
+        return side * side;
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        AreaCalculator ac = new AreaCalculator();
+
+        double circleArea = ac.Area(5.0);
+
+        double triangleArea = ac.Area(4.0, 6.0);
+
+        int squareArea = ac.Area(3);
+
+        Console.WriteLine("Area of Circle: " + circleArea);
+        Console.WriteLine("Area of Triangle :" + triangleArea);
+        Console.WriteLine("Area of Square: " + squareArea);
+    }
+}

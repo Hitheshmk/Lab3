@@ -1,0 +1,20 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+namespace ConsoleApplication11
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double number = 1234.56;
+            Console.WriteLine("Original Number: " + number);
+            Console.WriteLine("Currency Format (C): " + number.ToString("C"));
+            Console.WriteLine("Fixed-point Format (F): " + number.ToString("F"));
+            Console.WriteLine("Number Format (N): " + number.ToString("N"));
+            Console.WriteLine("Percent Format (P): " + (number / 10000).ToString("P"));
+            Console.WriteLine("Exponential Format (E): " + number.ToString("E"));
+        }
+    }
+}

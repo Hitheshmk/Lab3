@@ -1,0 +1,32 @@
+using System;
+
+public delegate void EDelegate(string str);
+
+class EventClass
+{
+    public event EDelegate Status;
+
+    public void TriggerEvent()
+    {
+        if (Status != null)
+            Status("Event Triggered");
+    }
+}
+
+class EventTest
+{
+    public static void Main()
+    {
+        EventClass ec = new EventClass();
+
+        EventTest et = new EventTest();
+        ec.Status += new EDelegate(et.EventCatch);
+
+        ec.TriggerEvent();
+    }
+
+    public void EventCatch(string str)
+    {
+        Console.WriteLine(str);
+    }
+}

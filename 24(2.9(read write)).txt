@@ -1,0 +1,20 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+namespace ConsoleApplication12
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string filePath = "example.txt";
+            string textToWrite = "Hello, this is a sample text written to the file.";
+            File.WriteAllText(filePath, textToWrite);
+            Console.WriteLine("Text written to file successfully.");
+            string readText = File.ReadAllText(filePath);
+            Console.WriteLine("Text read from file:");
+            Console.WriteLine(readText);
+        }
+    }
+}
