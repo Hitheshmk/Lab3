@@ -1,0 +1,16 @@
+using System;
+class AddNumbers
+{
+    static void Main(string[] args)
+    {
+        if (args.Length < 2)
+        {
+            Console.WriteLine("Please enter two values");
+            return;
+        }
+        int num1 = int.Parse(args[0]);
+        int num2 = int.Parse(args[1]);
+        int sum = num1 + num2;
+        Console.WriteLine("Sum: " + sum);
+    }
+} 

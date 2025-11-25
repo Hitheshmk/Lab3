@@ -1,0 +1,38 @@
+using System;
+
+class Rectangle
+{
+    public int length, width;     // Declaration of variables
+
+    public void GetData(int x, int y)   // Method to assign values
+    {
+        length = x;
+        width = y;
+    }
+
+    public int RectArea()        
+    {
+        int area = length * width;
+        return area;
+    }
+}
+
+class RectArea
+{
+    public static void Main()
+    {
+        int area1, area2;               
+        Rectangle rect1 = new Rectangle();
+        Rectangle rect2 = new Rectangle();
+
+        rect1.length = 15;              
+        rect1.width = 10;
+        area1 = rect1.length * rect1.width;
+
+        rect2.GetData(20, 12);         
+        area2 = rect2.RectArea();       
+
+        Console.WriteLine("Area1 = " + area1);
+        Console.WriteLine("Area2 = " + area2);
+    }
+}

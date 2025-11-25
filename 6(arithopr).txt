@@ -1,0 +1,35 @@
+using System;
+class Arithmetic
+{
+    static int Add(int a, int b)
+    {
+        return a + b; 
+    }
+ static int Subtract(int a, int b)
+{
+    return a - b;
+}
+static int Multiply(int a, int b)
+{
+    return a * b; 
+}
+static double Divide(int a, int b)
+{
+    return (double)a / b; 
+}
+static int Modulo(int a, int b)
+{
+    return a % b; 
+}
+static void Main(string[] args)
+{
+    int num1 = 20;
+    int num2 = 6;
+    Console.WriteLine("Arithmetic Operations:");
+    Console.WriteLine($"{num1} + {num2} = {Add(num1, num2)}");
+    Console.WriteLine($"{num1} - {num2} = {Subtract(num1, num2)}");
+    Console.WriteLine($"{num1} * {num2} = {Multiply(num1, num2)}");
+    Console.WriteLine($"{num1} / {num2} = {Divide(num1, num2)}");
+    Console.WriteLine($"{num1} % {num2} = {Modulo(num1, num2)}");
+}
+}
